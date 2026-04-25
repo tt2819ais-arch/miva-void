@@ -1,0 +1,39 @@
+.mq {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+  padding: 18px 0;
+}
+
+.mq-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 40px;
+  white-space: nowrap;
+  animation: mq-slide 42s linear infinite;
+  padding-left: 40px;
+}
+
+.mq-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 40px;
+  color: var(--ink);
+}
+
+.mq-text {
+  font-size: clamp(32px, 4vw, 56px);
+  letter-spacing: 0.02em;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.mq-dot {
+  color: var(--ink-faint);
+  font-size: 28px;
+}
+
+@keyframes mq-slide {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}

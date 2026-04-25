@@ -1,0 +1,99 @@
+.prod-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--line);
+}
+
+.prod-row {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  gap: 32px;
+  align-items: center;
+  padding: clamp(28px, 4vw, 48px) 0;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+  transition: background 0.5s var(--ease);
+}
+
+.prod-row::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 1px;
+  background: var(--ink);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.7s var(--ease);
+}
+.prod-row:hover::before { transform: scaleX(1); }
+
+.prod-index {
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  color: var(--ink-faint);
+  align-self: start;
+  padding-top: 10px;
+}
+
+.prod-main { min-width: 0; }
+
+.prod-tag {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  margin-bottom: 8px;
+}
+
+.prod-name {
+  font-size: clamp(32px, 5vw, 64px);
+  font-weight: 400;
+  margin: 0 0 12px;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  transition: transform 0.6s var(--ease);
+}
+.prod-row:hover .prod-name { transform: translateX(6px); }
+
+.prod-body {
+  max-width: 60ch;
+  margin: 0;
+  color: var(--ink-dim);
+}
+
+.prod-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: lowercase;
+  padding: 14px 20px;
+  border: 1px solid var(--line-2);
+  white-space: nowrap;
+  transition: border-color 0.4s var(--ease), background 0.4s var(--ease), color 0.4s var(--ease);
+}
+
+.prod-link:hover {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.prod-arrow {
+  display: inline-block;
+  transition: transform 0.4s var(--ease);
+}
+.prod-link:hover .prod-arrow { transform: translateX(6px); }
+
+@media (max-width: 820px) {
+  .prod-row {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 36px 0;
+  }
+  .prod-index { padding-top: 0; }
+  .prod-link { align-self: flex-start; }
+}
