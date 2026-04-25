@@ -50,11 +50,12 @@
 }
 
 .eco-name {
-  font-size: clamp(32px, 4.5vw, 56px);
+  font-size: clamp(28px, 4vw, 48px);
   margin: 8px 0 0;
-  font-weight: 400;
-  letter-spacing: -0.02em;
+  font-weight: 800;
+  letter-spacing: 0;
   line-height: 1;
+  text-transform: uppercase;
 }
 
 .eco-body {

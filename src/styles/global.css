@@ -10,7 +10,7 @@
   --line-2: #2a2a2a;
   --accent: #ffffff;
 
-  --font-display: 'Cormorant Garamond', 'Times New Roman', serif;
+  --font-display: 'Unbounded', 'Inter', system-ui, sans-serif;
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
 
@@ -36,23 +36,34 @@ html, body {
   overflow-x: hidden;
 }
 
-body {
+/* global grid + glow backdrop, under everything */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
   background-image:
-    radial-gradient(1200px 600px at 50% -10%, rgba(255,255,255,0.04), transparent 60%),
-    radial-gradient(800px 400px at 100% 100%, rgba(255,255,255,0.025), transparent 60%);
+    linear-gradient(to right, rgba(255,255,255,0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.035) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: radial-gradient(ellipse at 50% 40%, #000 35%, transparent 90%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 40%, #000 35%, transparent 90%);
 }
 
-/* subtle film grain, purely decorative */
-body::before {
+/* film grain */
+body::after {
   content: '';
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 1;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.07 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
-  opacity: 0.35;
+  opacity: 0.4;
   mix-blend-mode: overlay;
 }
+
+#root { position: relative; z-index: 2; }
 
 a {
   color: inherit;
@@ -67,6 +78,14 @@ button {
   background: none;
   border: 0;
   cursor: pointer;
+}
+
+input, textarea {
+  font-family: inherit;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  outline: none;
 }
 
 ::selection {
@@ -84,7 +103,9 @@ button {
 }
 
 .mono { font-family: var(--font-mono); letter-spacing: 0.02em; }
-.serif { font-family: var(--font-display); }
+.display { font-family: var(--font-display); font-weight: 800; letter-spacing: -0.02em; }
+.tracking { letter-spacing: 0.38em; }
+.tracking-md { letter-spacing: 0.2em; }
 
 .eyebrow {
   font-family: var(--font-mono);
@@ -118,11 +139,18 @@ section {
 
 .section-head h2 {
   font-family: var(--font-display);
-  font-weight: 400;
-  font-size: clamp(40px, 7vw, 92px);
+  font-weight: 800;
+  font-size: clamp(38px, 6.2vw, 84px);
   line-height: 0.95;
   margin: 0.1em 0 0;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.section-head h2 em {
+  font-style: normal;
+  color: var(--ink-dim);
+  font-weight: 500;
 }
 
 .section-head .section-idx {
@@ -130,6 +158,22 @@ section {
   font-size: 12px;
   color: var(--ink-faint);
   letter-spacing: 0.2em;
+}
+
+/* giant section number backdrop */
+.section-bignum {
+  position: absolute;
+  right: -0.05em;
+  top: -0.15em;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(180px, 32vw, 460px);
+  line-height: 0.8;
+  color: rgba(255, 255, 255, 0.025);
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: -0.05em;
+  z-index: 0;
 }
 
 /* links with underline reveal */

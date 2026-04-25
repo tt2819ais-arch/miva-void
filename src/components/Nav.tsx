@@ -25,16 +25,16 @@ export default function Nav() {
   return (
     <header className={`nav ${scrolled ? 'is-scrolled' : ''}`}>
       <div className="nav-inner container">
-        <a href="#top" className="nav-mark" aria-label="MIVA — наверх" onClick={close}>
+        <a href="#top" className="nav-mark" aria-label="M I V A — наверх" onClick={close}>
           <span className="mark-glyph">M</span>
-          <span className="mark-word">miva / void</span>
+          <span className="mark-word">M&nbsp;I&nbsp;V&nbsp;A&nbsp;·&nbsp;VOID</span>
         </a>
 
         <nav className="nav-links" aria-label="Основное меню">
           <a href="#ecosystem" className="link-ul">экосистема</a>
-          <a href="#products" className="link-ul">продукты</a>
-          <a href="#services" className="link-ul">что делаем</a>
-          <a href="#approach" className="link-ul">подход</a>
+          <a href="#cases" className="link-ul">кейсы</a>
+          <a href="#calc" className="link-ul">калькулятор</a>
+          <a href="#faq" className="link-ul">faq</a>
           <a href="#contact" className="link-ul">связаться</a>
         </nav>
 
@@ -53,10 +53,11 @@ export default function Nav() {
 
       <div className={`nav-sheet ${open ? 'is-open' : ''}`} aria-hidden={!open}>
         <a href="#ecosystem" onClick={close}>экосистема</a>
-        <a href="#products" onClick={close}>продукты</a>
+        <a href="#cases" onClick={close}>кейсы</a>
         <a href="#services" onClick={close}>что делаем</a>
-        <a href="#approach" onClick={close}>подход</a>
-        <a href="#why" onClick={close}>почему coder</a>
+        <a href="#calc" onClick={close}>калькулятор</a>
+        <a href="#testimonials" onClick={close}>отзывы</a>
+        <a href="#faq" onClick={close}>faq</a>
         <a href="#contact" onClick={close}>связаться</a>
       </div>
     </header>

@@ -22,7 +22,7 @@ export default function TwoPaths() {
             transition={{ duration: 0.8, ease: [0.2, 0.8, 0.2, 1] }}
           >
             <span className="mono tp-tag">/ индивидуально</span>
-            <h3 className="tp-name serif">MIVA Systems</h3>
+            <h3 className="tp-name display">M I V A Systems</h3>
             <p className="tp-body">Разработка под задачу. Системы, боты, сервисы — с нуля.</p>
             <a href="#contact" className="mono tp-link link-ul">заказать разработку →</a>
           </motion.div>
@@ -47,7 +47,7 @@ export default function TwoPaths() {
             transition={{ duration: 0.8, ease: [0.2, 0.8, 0.2, 1] }}
           >
             <span className="mono tp-tag">/ готовое</span>
-            <h3 className="tp-name serif">CODER Market</h3>
+            <h3 className="tp-name display">CODER Market</h3>
             <p className="tp-body">Готовые решения. Берёшь — запускаешь — зарабатываешь.</p>
             <a href="#contact" className="mono tp-link link-ul">смотреть каталог →</a>
           </motion.div>

@@ -22,10 +22,11 @@
 }
 
 .svc-title {
-  font-size: clamp(28px, 4.5vw, 54px);
-  font-weight: 400;
-  letter-spacing: -0.01em;
+  font-size: clamp(24px, 3.8vw, 46px);
+  font-weight: 800;
+  letter-spacing: 0;
   line-height: 1;
+  text-transform: uppercase;
   transition: color 0.4s var(--ease), transform 0.5s var(--ease), letter-spacing 0.5s var(--ease);
 }
 

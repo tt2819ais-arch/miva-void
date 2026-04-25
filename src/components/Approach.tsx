@@ -26,7 +26,7 @@ export default function Approach() {
             >
               <div className="apr-n mono">{a.n}</div>
               <div className="apr-rule" />
-              <h3 className="apr-title serif">{a.title}</h3>
+              <h3 className="apr-title display">{a.title}</h3>
               <p className="apr-body">{a.body}</p>
             </motion.li>
           ))}

@@ -8,7 +8,7 @@ export default function Marquee({ items }: { items: string[] }) {
       <div className="mq-track">
         {doubled.map((t, i) => (
           <span className="mq-item" key={i}>
-            <span className="serif mq-text">{t}</span>
+            <span className="display mq-text">{t}</span>
             <span className="mq-dot">·</span>
           </span>
         ))}

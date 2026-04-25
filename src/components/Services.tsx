@@ -26,7 +26,7 @@ export default function Services() {
               transition={{ delay: i * 0.06, duration: 0.7, ease: [0.2, 0.8, 0.2, 1] }}
             >
               <span className="svc-n mono">{String(i + 1).padStart(2, '0')}</span>
-              <span className="svc-title serif">{s}</span>
+              <span className="svc-title display">{s}</span>
               <span className="svc-rule" aria-hidden />
             </motion.li>
           ))}

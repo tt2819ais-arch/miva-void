@@ -37,11 +37,11 @@ export default function Ecosystem() {
               viewport={{ once: true, amount: 0.35 }}
             >
               <div className="eco-top">
-                <span className="eco-mark serif">{b.mark}</span>
+                <span className="eco-mark display">{b.mark}</span>
                 <span className="mono eco-role">— {b.role}</span>
               </div>
 
-              <h3 className="eco-name serif">{b.name}</h3>
+              <h3 className="eco-name display">{b.name}</h3>
               <p className="eco-body">{b.body}</p>
 
               <a className="eco-link link-ul mono" href={b.url}>

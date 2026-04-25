@@ -25,7 +25,7 @@ export default function Why() {
               transition={{ delay: i * 0.06, duration: 0.7, ease: [0.2, 0.8, 0.2, 1] }}
             >
               <span className="why-k mono">{w.k}</span>
-              <h3 className="why-title serif">{w.title}</h3>
+              <h3 className="why-title display">{w.title}</h3>
               <p className="why-body">{w.body}</p>
             </motion.div>
           ))}

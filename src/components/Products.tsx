@@ -28,7 +28,7 @@ export default function Products() {
 
               <div className="prod-main">
                 <div className="mono prod-tag">{p.tag}</div>
-                <h3 className="prod-name serif">{p.name}</h3>
+                <h3 className="prod-name display">{p.name}</h3>
                 <p className="prod-body">{p.body}</p>
               </div>
 
