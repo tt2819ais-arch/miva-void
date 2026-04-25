@@ -27,7 +27,7 @@ export default function Nav() {
       <div className="nav-inner container">
         <a href="#top" className="nav-mark" aria-label="M I V A — наверх" onClick={close}>
           <span className="mark-glyph">M</span>
-          <span className="mark-word">M&nbsp;I&nbsp;V&nbsp;A&nbsp;·&nbsp;VOID</span>
+          <span className="mark-word">M&nbsp;I&nbsp;V&nbsp;A&nbsp;/&nbsp;SYSTEMS</span>
         </a>
 
         <nav className="nav-links" aria-label="Основное меню">

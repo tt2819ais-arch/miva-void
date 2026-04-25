@@ -11,7 +11,7 @@ export default function Hero() {
     <section className="hero" id="top">
       {/* backdrop word */}
       <div className="hero-backdrop" aria-hidden>
-        <span>VOID</span>
+        <span>SYSTEMS</span>
       </div>
 
       {/* side tickers */}
@@ -24,7 +24,7 @@ export default function Hero() {
       <aside className="hero-side hero-side--right mono" aria-hidden>
         <span>n° 001</span>
         <span>mmxxv</span>
-        <span>void</span>
+        <span>miva</span>
         <span>coder</span>
       </aside>
 

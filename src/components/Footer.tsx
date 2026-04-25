@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-super display" aria-hidden>
         <span>M&nbsp;I&nbsp;V&nbsp;A</span>
-        <span className="footer-super-2">· VOID ·</span>
+        <span className="footer-super-2">/ SYSTEMS /</span>
         <span>M&nbsp;I&nbsp;V&nbsp;A</span>
       </div>
 
@@ -15,7 +15,7 @@ export default function Footer() {
           <div className="footer-col footer-col--brand">
             <div className="footer-mark">
               <span className="mark-glyph display">M</span>
-              <span className="mono">M&nbsp;I&nbsp;V&nbsp;A &nbsp;/&nbsp; VOID</span>
+              <span className="mono">M&nbsp;I&nbsp;V&nbsp;A &nbsp;/&nbsp; SYSTEMS</span>
             </div>
             <p className="footer-tag">
               Coder — пространство кодера. Инструменты, проекты и решения

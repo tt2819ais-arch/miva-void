@@ -33,7 +33,7 @@ export default function Contact() {
     if (!canSend) return
     // open telegram chat with pre-filled message
     const payload =
-      `Заявка с miva-void.\nИмя: ${name}\nКонтакт: ${contact}\n\n${brief}`
+      `Заявка с MIVA Systems.\nИмя: ${name}\nКонтакт: ${contact}\n\n${brief}`
     const url = `https://t.me/miva_studio?text=${encodeURIComponent(payload)}`
     window.open(url, '_blank')
     setSent(true)

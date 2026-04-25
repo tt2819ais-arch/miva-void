@@ -64,7 +64,7 @@ export default function Terminal() {
         <span className="term-dot" />
         <span className="term-dot" />
         <span className="term-dot" />
-        <span className="term-title">miva@void ~ /run</span>
+        <span className="term-title">miva@systems ~ /run</span>
       </div>
       <div className="term-body mono">
         {rendered.map((l, i) => (
